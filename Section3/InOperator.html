@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var course1 = {
+           name : "Javascript fundamentals" //[put]
+       }
+
+       var course2 = new Object();
+       course2.name = "Reactjs";
+
+       course1.name = "End to End " // [set]
+
+      course1.description = "Master java project"; // [put]
+
+      console.log("name" in course1);
+      console.log("toString" in course1); // Inherited Property
+      console.log(course1.hasOwnProperty('toString')); // To Check if it has Own  Property
+
+  </script>
+  </body>
+</html>
