@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function displayDetails(testScore) {
+        document.write(this.id + "<br/>");
+        document.write(testScore + "<br/>");
+        document.write(this.name + "<br/>");
+      }
+
+      var student = {
+        id: 1,
+        name: "Fisrt"
+      };
+
+      var student1 = {
+        id: 2,
+        name: "Second"
+      };
+
+      this.id = 34;
+      this.name = "global";
+
+      var displayForStudent = displayDetails.bind(student);
+      displayForStudent(10);
+
+      var displayForStudent2 = displayDetails.bind(student1, 20);
+      displayForStudent2();
+       
+       displayForStudent2.displayDetails = displayForStudent;
+       displayForStudent2.displayDetails(43)
+
+    </script>
+  </body>
+</html>

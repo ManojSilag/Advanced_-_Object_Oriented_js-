@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+
+      function displayDetails(testScore){
+                  document.write(this.id + "<br/>") ;
+                  document.write(testScore + "<br/>");
+                  document.write(this.name + "<br/>");
+     }
+
+          var student = {
+              id:1,
+              name: "Fisrt"
+          };
+
+          var student1 = {
+              id:1,
+              name: "Second"
+          };
+
+          this.id = 34;
+          this.name = "global"
+
+          displayDetails.apply(student,[12]);
+          displayDetails.apply(student1,[34]);
+          displayDetails.apply(this,[100]);
+
+
+    </script>
+  </body>
+</html>
