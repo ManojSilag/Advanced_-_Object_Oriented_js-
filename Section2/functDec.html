@@ -1,0 +1,61 @@
+<html>
+<head>
+</head>
+<body>
+    <script>
+
+//Named Function
+function evenOrOdd(num){
+    document.write(arguments[2]+"<br/>");
+    document.write(arguments.length+"<br/>");
+    document.write(evenOrOdd.length+"<br/>");
+
+    if(num%2 == 0){
+        return "even"
+    }else{
+        return "odd"
+    }
+}
+document.write(evenOrOdd(12,123,43,23))
+
+
+//Assigning Function to variable
+var fun =function(num){
+    if(num%2 == 0){
+        return "even"
+    }else{
+        return "odd"
+    }  
+};
+
+document.write(fun(7))
+
+
+function product(){
+    var result = 1;
+    for(var i=0; i<arguments.length; i++){
+        result += arguments[i]
+    }
+    return result;
+}
+
+document.write(product(12,123,3,34))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
