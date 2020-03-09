@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primitive Data type</title>
+</head>
+<body>
+    
+<script>
+  
+  // new Keyword and constructor
+  var obj1 = new Object();
+  var obj2 = obj1;
+  
+
+  obj1.myProperty = "All the power is with in you";
+
+  var product = new Array();
+  var Date = new Date();
+  var error = new Error('wrong');
+  var myFun = new Function("document.write('HELLO')")
+  var regEx = new RegExp("\\d+");
+
+  document.write(obj2 === obj1)
+
+
+
+    // Literals
+
+    var student = {
+        name: 'MANOJ'
+    }
+
+    var studentNames = ['James', 'Harry'];
+
+    function hello(name){
+        return "Hello"+ name;
+    }
+    var myFun = new Function("name", "return 'hello'+ name");
+ 
+    document.write(typeof student+"<br/>");
+
+</script>
+</body>
+</html>
