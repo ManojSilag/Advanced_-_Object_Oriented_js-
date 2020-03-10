@@ -15,17 +15,22 @@
            enumerable: false
        });
      
-
        console.log("name" in creditCard);
        console.log(creditCard.propertyIsEnumerable('name'));
-       
-       creditCard.name = "Bob"
+
+       Object.defineProperty(creditCard, "name", {
+           configurable: false
+       });
+
+       delete creditCard.name;
        console.log(creditCard);
-
        
 
+       Object.defineProperty(creditCard, "name", {
+           configurable: true
+       });
+       console.log(creditCard);       
 
-
-  </script>
+</script>
   </body>
 </html>
