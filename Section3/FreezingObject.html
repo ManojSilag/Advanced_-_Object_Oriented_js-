@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+              
+              var product = {
+                  name: "Iphone"
+              }
+
+              console.log(Object.isFrozen(product));
+              
+              Object.freeze(product)
+
+              console.log(Object.isFrozen(product));
+              var descriptor = Object.getOwnPropertyDescriptor(product, 'name');
+            //   console.log(descriptor);
+
+              var License = {}
+              Object.defineProperties(License,{
+                  name:{
+                      value: 'Roo',
+                      enumerable: false
+                  },
+                  number:{
+                      value: 123432,
+                      configurable: false
+                  }
+              })
+            
+              Object.seal(License);
+
+              console.log(Object.isSealed(License));
+              
+              
+
+
+    </script>   
+</body>
+</html>
