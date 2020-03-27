@@ -28,6 +28,24 @@
           console.log(flight1.constructor === Flight);
           
 
+        function Laptop(manifacturer, memory, capacity){
+         this.manifacturer = manifacturer;
+         this.memory = memory;
+         this.capacity = capacity;
+
+         this.display = function(){
+             console.log('manifacturer', manifacturer);
+             console.log('memory', memory);
+             console.log('capacity', capacity);
+         }
+        }
+
+        var laptop1 = new Laptop('Mac', '2GB', '50GB')
+        var laptop1 = new Laptop('Dell', '4GB', '100GB')
+
+        laptop1.display();
+        laptop1.display();
+
     </script>
 </body>
 </html>
